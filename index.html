@@ -10,14 +10,78 @@
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
 	<link rel="manifest" href="manifest.json">
 <style>
+/* RESPONSIVE CHO MỌI MÀN HÌNH - XÓA scale cũ */
 html, body {
-    transform: scale(0.95);  /* Chỉ nhỏ 8% - nhẹ nhàng */
-    transform-origin: 0 0;
-    width: 105.3%;           /* 100/0.92 */
-    height: 105.3%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    font-family: 'Noto Sans', sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Mobile-first: Tự động fit mọi màn hình */
+.zhengti {
+    max-width: 100vw;
+    padding: 1vh 2vw;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Font size responsive theo màn hình */
+.juzuo1 { 
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    text-align: center;
+    margin-bottom: 1vh;
+}
+
+#biaoti {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    line-height: 1.2;
+    margin: 1vh 0;
+    word-break: break-word;
+}
+
+.erweima {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.ewm {
+    max-width: 80vw;
+    max-height: 80vh;
+    width: auto;
+    height: auto;
+}
+
+.footsty {
+    font-size: clamp(1.1rem, 3.5vw, 1.6rem);
+}
+
+a.shuaxinerweima {
+    font-size: clamp(1.2rem, 4vw, 1.8rem) !important;
+    padding: 1vh 2vw;
+    display: block;
+    text-decoration: none;
+}
+
+.dierhang {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    line-height: 1.4;
+    padding: 1vh 0;
+    text-align: center;
+}
+
+/* Tablet lớn hơn */
+@media (min-width: 768px) {
+    .zhengti { padding: 2vh 4vw; }
 }
 </style>
 
